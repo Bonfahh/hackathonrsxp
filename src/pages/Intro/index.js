@@ -8,6 +8,12 @@ import { Container, Title, Paragraph } from './styles';
 import Button from '../../components/Button';
 
 const Intro = ({ navigation }) => {
+  const tech = useRef();
+  const law = useRef();
+  const cards = useRef();
+  const health = useRef();
+  const world = useRef();
+
   return (
     <Swiper>
       <LinearGradient colors={['#1f1c1c', '#2e2828']} style={{ flex: 1 }}>
@@ -16,6 +22,8 @@ const Intro = ({ navigation }) => {
           <View style={{ width: 200, height: 200 }}>
             <LottieView
               source={require('../../assets/tech.json')}
+              ref={tech}
+              progress={0.1}
               autoPlay
               loop
               style={{ flex: 1 }}
@@ -47,7 +55,8 @@ const Intro = ({ navigation }) => {
           <Title>Tecnologia no Direito</Title>
           <View style={{ width: 200, height: 200 }}>
             <LottieView
-              source={require('../../assets/law1.json')}
+              source={require('../../assets/law.json')}
+              ref={law}
               autoPlay
               loop
               style={{ flex: 1 }}
@@ -70,6 +79,7 @@ const Intro = ({ navigation }) => {
           <View style={{ width: 200, height: 200 }}>
             <LottieView
               source={require('../../assets/health.json')}
+              ref={health}
               autoPlay
               loop
               style={{ flex: 1 }}
@@ -92,6 +102,7 @@ const Intro = ({ navigation }) => {
           <View style={{ width: 200, height: 200 }}>
             <LottieView
               source={require('../../assets/cards.json')}
+              ref={cards}
               autoPlay
               loop
               style={{ flex: 1 }}
@@ -113,6 +124,7 @@ const Intro = ({ navigation }) => {
           <View style={{ width: 200, height: 200 }}>
             <LottieView
               source={require('../../assets/world.json')}
+              ref={world}
               autoPlay
               loop
               style={{ flex: 1 }}
